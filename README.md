@@ -23,9 +23,13 @@ The application should now be running at `http://localhost:8000`.
 
 ## API Endpoints
 
+### Authentication Endpoints
+
 - `POST /api/auth/register`: Register a new user.
 - `POST /api/auth/login`: Login a user.
 - `GET /api/auth/logout`: Logout a user. 
+
+### Tweets Endpoints
 
 - `GET /api/tweets`: Fetch all tweets.
 - `POST /api/tweets`: Create a new tweet.
@@ -37,7 +41,6 @@ The application should now be running at `http://localhost:8000`.
 - `GET /api/tweets/<id>/comments`: Get all comments for a specific tweet.
 
 - `POST /api/tweets/<id>/like`: Like a specific tweet.
-- `POST /api/tweets/<id>/unlike`: Unlike a specific tweet.
 
 
 ## Running the Application Without Docker
