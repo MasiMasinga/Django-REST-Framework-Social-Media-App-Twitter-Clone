@@ -10,7 +10,7 @@ Ensure you have Docker and Docker Compose installed on your machine.
 
 1. Clone the repository:
     ```
-    git clone https://github.com/username/repository.git
+    git clone https://github.com/MasiMasinga/Django-REST-Framework-Social-Media-App-Twitter-Clone.git
     cd repository
     ```
 

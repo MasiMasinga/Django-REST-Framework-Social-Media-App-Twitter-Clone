@@ -1,5 +1,10 @@
+import os
+
 from pathlib import Path
 from datetime import timedelta 
+from dotenv import load_dotenv
+
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -94,10 +99,10 @@ WSGI_APPLICATION = 'twitter_clone.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'twitter_clone',
-        'USER': 'postgres',
-        'PASSWORD': 'Resolute*2024',
-        'HOST': 'twitter-clone.c1ameauoo4xk.af-south-1.rds.amazonaws.com',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
         'PORT': '5432',
     }
 }
