@@ -7,7 +7,6 @@ from rest_framework.views import APIView
 from .models import User
 from .serializers import UserSerializer, CustomTokenObtainPairSerializer
 
-
 class RegisterView(APIView):
     def post(self, request):
         serializer = UserSerializer(data=request.data)
@@ -20,7 +19,6 @@ class RegisterView(APIView):
 
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
-
 
 class LoginView(APIView):
     def post(self, request):
@@ -50,3 +48,4 @@ class LogoutView(APIView):
             return Response(status=status.HTTP_200_OK)
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
