@@ -4,10 +4,10 @@ services:
   web:
     restart: always
     build: .
-    command: python src/manage.py migrate && python manage.py runserver 0.0.0.0:8000
+    working_dir: /code/src
+    command: python ./manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
-    working_dir: /code
     ports:
       - 8000:8000
     depends_on:
