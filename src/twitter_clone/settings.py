@@ -15,6 +15,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost', 
     '127.0.0.1',
+    '0.0.0.0',
     'twitter-clone.c1ameauoo4xk.af-south-1.rds.amazonaws.com',
 ]
 
@@ -41,7 +42,7 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=8),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=8),
     "UPDATE_LAST_LOGIN": True,
     'ROTATE_REFRESH_TOKENS': True,
